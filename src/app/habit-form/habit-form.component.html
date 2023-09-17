@@ -1,0 +1,12 @@
+<form [formGroup]="habitForm" (ngSubmit)="addHabit(habitForm.value)">
+  <input
+    class="bg-gray-100 rounded p-1 border-2"
+    type="text"
+    name="name"
+    formControlName="name"
+    placeholder="add habit"
+  />
+  <button class="text-white bg-blue-600 p-1 rounded w-14 ml-4" type="submit">
+    Add
+  </button>
+</form>

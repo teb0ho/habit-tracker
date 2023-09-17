@@ -1,0 +1,6 @@
+<div class="text-center" *ngIf="!items.length">no items yet</div>
+<ul *ngIf="items.length">
+  <ng-container *ngFor="let item of items">
+    <app-list-item name="item"></app-list-item>
+  </ng-container>
+</ul>
