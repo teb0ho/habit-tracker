@@ -6,6 +6,7 @@ import { ListItemComponent } from './list-item/list-item.component';
 import { ListComponent } from './list/list.component';
 import { HabitFormComponent } from './habit-form/habit-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListComponent,
     HabitFormComponent,
   ],
-  imports: [BrowserModule, ReactiveFormsModule],
+  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,8 +1,8 @@
 {
-    "habits": [
-        {
-            "id": 1,
-            "name": "code every day"
-        }
-    ]
+  "habits": [
+    {
+      "id": 1,
+      "name": "code every day"
+    }
+  ]
 }
