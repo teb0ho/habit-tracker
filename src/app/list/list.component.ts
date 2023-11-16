@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { Habit } from '../shared/models/habit.model';
 
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
+  templateUrl: 'list.component.html',
+  styleUrls: ['list.component.css'],
 })
 export class ListComponent {
-  @Input() items: string[] = [];
+  @Input() items: Habit[] = [];
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HabitService } from './habit.service';
+import { Habit } from './shared/models/habit.model';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +9,19 @@ import { HabitService } from './habit.service';
 })
 export class AppComponent implements OnInit {
   title = 'habit-tracker';
-  habits: string[] = [];
+  habits: Habit[] = [];
 
   constructor(private habitsService: HabitService) {}
 
   ngOnInit() {
     this.habitsService
       .getHabits()
-      .subscribe((habits) => (this.habits = habits.map((b) => b.name)));
+      .subscribe((habits) => (this.habits = habits));
   }
 
   addHabit(habit: string) {
-    this.habits.push(habit);
-    this.habitsService.addHabit(habit).subscribe(() => {
-      console.log('successfully added');
+    this.habitsService.addHabit(habit).subscribe((h) => {
+      this.habits.push(h);
     });
   }
 }

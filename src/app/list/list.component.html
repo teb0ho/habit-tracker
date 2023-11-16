@@ -1,6 +1,9 @@
-<div class="text-center" *ngIf="!items.length">no items yet</div>
-<ul *ngIf="items.length">
-  <ng-container *ngFor="let item of items">
-    <app-list-item [name]="item"></app-list-item>
-  </ng-container>
+@if (!items.length) {
+<div class="text-center">no items yet</div>
+} @if (items.length) {
+<ul>
+  @for (item of items; track item.id) {
+  <app-list-item [name]="item.name"></app-list-item>
+  }
 </ul>
+}

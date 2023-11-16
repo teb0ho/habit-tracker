@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-habit-form',
-  templateUrl: './habit-form.component.html',
-  styleUrls: ['./habit-form.component.css'],
+  templateUrl: 'habit-form.component.html',
+  styleUrl: 'habit-form.component.css',
 })
 export class HabitFormComponent {
   habitForm;
