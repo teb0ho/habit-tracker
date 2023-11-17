@@ -3,8 +3,8 @@ import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-habit-form',
-  templateUrl: 'habit-form.component.html',
-  styleUrl: 'habit-form.component.css',
+  templateUrl: './habit-form.component.html',
+  styleUrl: './habit-form.component.css',
 })
 export class HabitFormComponent {
   habitForm;
